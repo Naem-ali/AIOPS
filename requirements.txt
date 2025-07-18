@@ -1,0 +1,17 @@
+streamlit==1.32.0
+pandas==1.5.3  # Downgraded for Python 3.8 compatibility
+numpy==1.24.0
+plotly==5.18.0
+scikit-learn==1.2.2  # Compatible version
+prometheus-api-client==0.5.1  # Specific compatible version
+datadog-api-client==2.12.0
+python-dotenv==1.0.0
+typing-extensions==4.5.0  # Required for type hints in Python 3.8
+
+# Standard installation
+# pip install -r requirements.txt
+
+# Alternative for a clean environment
+# pip install --upgrade pip && pip install -r requirements.txt
+# pip install statsmodels prophet scikit-learn plotly numpy pandas streamlit
+# pip install prometheus-api-client datadog-api-client python-dotenv

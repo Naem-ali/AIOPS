@@ -25,6 +25,40 @@ REFRESH_INTERVAL = 15  # seconds
 # Custom CSS for modern look
 st.markdown("""
 <style>
+    /* Sidebar styling */
+    [data-testid="stSidebar"] {
+        background-color: #1a1a1a;
+    }
+    
+    [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
+        color: #ffffff;
+    }
+    
+    /* Make sidebar headers bright */
+    [data-testid="stSidebar"] h1,
+    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] h3 {
+        color: #ffffff !important;
+    }
+    
+    [data-testid="stSidebar"] .stButton button {
+        background-color: #2c3e50;
+        color: white;
+        border: 1px solid #34495e;
+    }
+    
+    [data-testid="stSidebar"] .stSlider {
+        color: white;
+    }
+    
+    [data-testid="stSidebar"] .stCheckbox {
+        color: white;
+    }
+    
+    [data-testid="stSidebar"] .stSelectbox {
+        color: white;
+    }
+    
     /* Main container */
     .stApp {
         background-color: #f8f9fa;
@@ -535,11 +569,6 @@ def main():
     
     # Sidebar
     with st.sidebar:
-        st.header("Controls")
-        if st.button("🔄 Refresh Now"):
-            st.experimental_rerun()
-        
-        st.markdown("---")
         st.header("System Status")
         
         # Test connection

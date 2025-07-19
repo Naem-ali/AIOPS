@@ -202,12 +202,36 @@ def create_gauge(value, title, min_val=0, max_val=100):
 
 def setup_page():
     """Setup the page layout without page config"""
-    # Custom header
-    col1, col2 = st.columns([1, 3])
+    # Custom header with elegant small logo
+    col1, _ = st.columns([0.5, 3.5])  # Make first column smaller
     with col1:
-        st.image("https://via.placeholder.com/150x50?text=AIOps", width=150)
-    with col2:
-        st.title("AIOPS Dashboard")
+        st.markdown("""
+            <div style='
+                background-color: #1a1a1a;
+                padding: 8px 15px;
+                border-radius: 8px;
+                text-align: center;
+                width: fit-content;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                border: 1px solid #2c3e50;
+            '>
+                <div style='
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+                    letter-spacing: 0.5px;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+                '>
+                    <span style='font-size: 14px;'>🤖</span>
+                    <span>AIOPS</span>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
     
     st.markdown("---")
 
